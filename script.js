@@ -47,10 +47,12 @@ $(document).ready(function(){
 		    		if (totalCash>= fruitArray[i].price) {
 
 			    		//subtract current price from total cash
-				    	totalCash-=fruitArray[i].price.toFixed(2);
+				    	totalCash= (totalCash - fruitArray[i].price).toFixed(2);
 
 				    	//Change Total Cash display
-				    	$(".total-cash").children().first().next().next().children().first().text(totalCash);
+
+				    	// $(".total-cash").children().first().next().next().children().first().text(totalCash);
+				    	$("h2").children().first().text(totalCash);
 				    	
 				    	//Increase total # of this kind of fruit purchased by one
 						fruitArray[i].totalPurchased ++;
