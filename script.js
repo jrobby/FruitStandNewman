@@ -16,7 +16,7 @@ function randomPrice(fruit) {
 	} else if (newPrice > 9.99) {
 		newPrice=9.99;
 	}
-	fruit.price=newPrice;
+	fruit.price=newPrice.toFix(2);
 	console.log("new price of " + fruit.name + ": " + fruit.price);
 }
 
